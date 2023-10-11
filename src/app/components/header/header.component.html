@@ -1,19 +1,24 @@
 <div class="header">
+    <app-pop-up (close)="openPopUp = false" *ngIf="openPopUp"></app-pop-up>
+
     <div class="first-landeau">
             <div class="header-logo">
                 <button class="logo-button"></button>
             </div>
-            <div class="header-search">
+            <div (click)="openPopUp = !openPopUp" class="header-search">
                 <div class="button-item" style="font-weight: bold;">N'importe où</div>
                 <div class="separator">|</div>
                 <div class="button-item" style="font-weight: bold;">Une semaine</div>
                 <div class="separator">|</div>
                 <div class="button-item">Ajouter des voyageurs</div>
                 <div class="button-item-search"></div>
+
             </div>
             <div class="header-buttons">
-                <button class="buttonCo-myLog">mettre mon logement sur AirBnB</button>
-                <button class="buttonCo-Earth"></button>
+                <button class="buttonCo-myLog" style="font-weight: bold;">mettre mon logement sur AirBnB</button>
+                <div class="buttonCo-Earth-containt">
+                    <button class="buttonCo-Earth"></button>
+                </div>
                 <button class="buttonCo-Connect">
                     <div class="buttonCo-Connect-image1"></div>
                     <div class="buttonCo-Connect-image2"></div>
@@ -21,6 +26,13 @@
             </div>  
     </div> 
     <div class="second-landeau">
-        <div class="activties">Act</div>
+    <ng-container *ngIf="navItems$ | async as items">
+        <div *ngFor="let item of items" class="header-carousel">
+            <div class="text">
+                <h1>{{ item.name }}</h1>
+            </div>
+        </div>
+    </ng-container>
     </div>
+    
 </div>

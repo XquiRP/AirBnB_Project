@@ -1,0 +1,126 @@
+.cards-content {
+    padding: 1rem;
+    width: 20rem;
+    height: 25rem;
+
+    .card-body {
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 1rem;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .thumbnail {
+            border: 0px solid rgba(0, 0, 0, 0);
+            border-radius: 1rem;
+            display: flex;
+            overflow: hidden;
+            height: 18rem;
+
+            .heart-container {
+                display: flex;
+                width: 18rem;
+                position: absolute;
+                z-index: 2;
+                margin: 1rem;
+                justify-content: flex-end;
+
+                .heart {
+                    width: 3rem;
+                    stroke: white;
+
+                    .fill-color-false {
+                        fill: red;
+                    }
+
+                    .fill-color-true {
+                        fill: green;
+                    }
+                }
+            }
+            .image-crop {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover; 
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .location-info-container {
+            display: flex;
+            height: fit-content;
+            justify-content: space-between;
+            padding-top: 1rem;
+            height: 5rem;
+    
+            .location-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .owner {
+                    font-size: 1.3rem;
+                    color: rgba(58, 58, 58, 0.75);
+                }
+    
+                .location-name-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+
+                    .location-name {
+                        font-size: 1.35rem;
+                        font-weight: bold;
+                    }
+
+                    .location-name-zipCode {
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                    }
+                }
+        
+                .location-price {
+                    display: flex;
+                    flex-direction: row;
+
+                    .price-value {
+                        font-family: 'airbnbcereal_w_bdbold';
+                        font-size: 1.25rem;
+                    }
+
+                    .price-text {
+                        margin-left: 0.5rem;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            .location-rating {
+                align-items: flex-start;
+                
+                .location-rating-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .star-img {
+                        margin-right: 0.3rem;
+                        width: 1rem;
+                    }
+
+                    .rating-text {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

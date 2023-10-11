@@ -1,0 +1,28 @@
+.pop-up-container {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.237);
+    display: flex;
+    padding-top: 10rem;
+    justify-content: center;
+    .input-pop {
+        position: absolute;
+        z-index: 4;
+        width: 30%;
+        height: 70px;
+        border-radius: 8px;
+        input {
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            border: none;
+            outline: none;
+            padding-inline-start: 3rem;
+            font-size: 2rem;
+        }
+
+        
+    }
+}

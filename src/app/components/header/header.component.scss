@@ -144,35 +144,34 @@
 }
 */
 .header{
-
     margin: 0;
     padding: 0;
 
+
     .first-landeau{
-        background-color: rgb(159, 150, 28);
+        background-color: rgb(255, 255, 255);
 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .header-logo{
-            background-color: purple;
-            margin-left: 30px;  
+            margin-left: 80px;  
 
             .logo-button{
                 background: url("../../../assets/Airbnb_Logo_one.png") no-repeat center center;
                 background-size: contain;
                 border: none;
                 cursor: pointer;
-                width: 90px; 
-                height: 90px;  
+                width: 100px; 
+                height: 100px;  
             }
         }
         .header-search{
-            background-color: #fff;
             color: #2e2828;
             border: 0.5px solid #c2c2c2;
-            padding: 5px 20px; 
+            margin-left: 300px;
+            padding: 5px 10px; 
             border-radius: 30px; 
             cursor: pointer;
             transition: box-shadow 0.3s; 
@@ -200,17 +199,104 @@
             }
         }
         .header-buttons{
-            background-color: bisque;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            margin-right: 50px;
+
+            .buttonCo-myLog {
+                border-color: transparent;
+                background-color: transparent;
+                color: #545454;  
+                padding: 10px;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: box-shadow 0.3s; 
+                margin: 10px;
+                white-space: nowrap;
+        
+            }
+            .buttonCo-Earth-containt{
+                position: relative;
+            
+                .buttonCo-Earth{
+                    background-image: url("../../../assets/EARTH.png");
+                    background-color: transparent;
+                    background-size: contain;
+                    border: none;
+                    margin: 0px 10px;
+                    cursor: pointer;
+                    width: 20px; 
+                    height: 20px; 
+                    border-radius: 20px;
+            
+                }
+            }
+            .buttonCo-Connect{
+        
+                margin: 0px 10px;
+                display: flex; 
+                flex-direction: row; 
+                align-items: center; 
+                border-color: transparent;
+                background-color: transparent;
+                border-radius: 15px;
+               
+                .buttonCo-Connect-image1{
+                    background-image: url("../../../assets/threeBar.png");
+                    background-size: contain;
+                    border: none;
+                    cursor: pointer;
+                    width: 30px; 
+                    height: 30px; 
+                }
+                .buttonCo-Connect-image2{
+                    background-image: url("../../../assets/connexion.png");
+                    background-size: contain;
+                    border: none;
+                    cursor: pointer;
+                    width: 30px; 
+                    height: 30px;   
+                }
+            }
+        }
+        .buttonCo-Earth::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0); 
+            transition: background-color 0.3s;
         }
         .header-search:hover {
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
         }
+        .buttonCo-myLog:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+        }         
+        .buttonCo-Earth:hover::before {
+            background-color: rgba(128, 128, 128, 0.5);  /* L'élément devient grisé au survol */
+        } 
+        .buttonCo-Connect:hover{
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
     }
     .second-landeau{
         background-color: yellow;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        flex-direction: row;    
+        .header-carousel 
+        {
+            font-size: 7px;
+            margin: 20px; 
+        }
     }
 }
+    
+
 
