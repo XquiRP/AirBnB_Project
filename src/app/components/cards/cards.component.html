@@ -1,7 +1,7 @@
 <div class="body-container">
-    <ng-container *ngIf="cards$ | async as cards">
-        <button class="cards-content" *ngFor="let card of cards">
+    <ng-container *ngIf="cards">
+        <div class="cards-content" *ngFor="let card of cards">
             <app-cards-content [accomodation]="card"></app-cards-content>
-        </button>
+        </div>
     </ng-container>
 </div>

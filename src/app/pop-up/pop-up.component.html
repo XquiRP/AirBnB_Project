@@ -1,6 +1,11 @@
 <div class="pop-up-container">
     <div class="input-pop">
         <div  (click)="closePopUp()" class="close-x">X</div>
-        <input type="text" placeholder="Cherchez votre localisation">
+        <input type="text" placeholder="Cherchez votre localisation" (input)="onInputChange($event)">
+        <div *ngIf="results" class="gray-dropdown">
+            <ul>
+                <li *ngFor="let result of results" (click)="selectCity(result)">{{ result.nom }}</li>
+            </ul>
+        </div>
     </div>
 </div>

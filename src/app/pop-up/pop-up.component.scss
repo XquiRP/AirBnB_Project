@@ -4,15 +4,18 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.237);
+    
     display: flex;
-    padding-top: 10rem;
+    padding-top: 7rem;
     justify-content: center;
     .input-pop {
+
         position: absolute;
         z-index: 4;
         width: 30%;
         height: 70px;
         border-radius: 8px;
+        
         input {
             width: 100%;
             height: 100%;
@@ -22,7 +25,51 @@
             padding-inline-start: 3rem;
             font-size: 2rem;
         }
-
-        
+        .gray-dropdown {
+            background-color: #ccc; 
+            border: 1px solid #888;
+            padding: 5px; 
+          
+            ul {
+              list-style: none; 
+              margin: 0;
+              padding: 0;
+            }
+          
+            li {
+              padding: 5px; 
+              border-bottom: 1px solid #aaa; 
+          
+              &:last-child {
+                border-bottom: none; 
+              }
+            }
+          }
+          .close-x {
+            cursor: pointer; /* Change le curseur en main au survol */
+            display: inline-block;
+            padding: 5px 10px; /* Marge interne pour l'apparence du bouton */
+            background-color: #ff5555; /* Couleur de fond du bouton */
+            color: #fff; /* Couleur du texte */
+            border: 1px solid #ff5555; /* Bordure du bouton */
+            border-radius: 50%; /* Crée un bouton rond */
+            font-size: 16px; /* Taille du texte */
+            line-height: 1; /* Centrage vertical du texte */
+            transition: background-color 0.3s, color 0.3s; /* Animation de transition en cas de survol */
+          
+            &:hover {
+              background-color: #ff3333; /* Couleur de fond au survol */
+              border: 1px solid #ff3333; /* Bordure au survol */
+            }
+          
+            span {
+              display: block;
+              width: 100%;
+              text-align: center;
+            }
+          }
+          
     }
+
+      
 }
