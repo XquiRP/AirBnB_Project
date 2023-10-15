@@ -1,6 +1,6 @@
 <div class="body-container">
     <ng-container *ngIf="cards">
-        <div class="cards-content" *ngFor="let card of cards">
+        <div class="cards-content" *ngFor="let card of cards" (click)="navigateToPage(card.city_name)">
             <app-cards-content [accomodation]="card"></app-cards-content>
         </div>
     </ng-container>
