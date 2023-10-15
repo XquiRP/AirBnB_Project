@@ -34,7 +34,7 @@ export class CardsComponent implements OnInit {
     const url = 'http://localhost:3000/accommodations?city=' + this.selectedCity;
     return this.http.get<Array<AccomodationType>>(url);
   }
-  navigateToPage(cityName: string) {
-    this.router.navigate(['city', cityName]);
+  navigateToPage(cityId: number) {
+    this.router.navigate(['city', cityId]);
   }
 }
