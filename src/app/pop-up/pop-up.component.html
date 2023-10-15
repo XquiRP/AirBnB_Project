@@ -1,9 +1,15 @@
 <div class="pop-up-container">
     <div class="input-pop">
-        <div  (click)="closePopUp()" class="close-x">X</div>
+        <!-- Ferme la pop-up lorsque l'utilisateur clique sur "X" -->
+        <div (click)="closePopUp()" class="close-x">X</div>
+        
+        <!-- Input pour rechercher une localisation -->
         <input type="text" placeholder="Cherchez votre localisation" (input)="onInputChange($event)">
+        
+        <!-- Affiche une liste déroulante grise lorsque des résultats sont disponibles -->
         <div *ngIf="results" class="gray-dropdown">
             <ul>
+                <!-- Affiche les résultats de la recherche sous forme de liste -->
                 <li *ngFor="let result of results" (click)="selectCity(result)">{{ result.nom }}</li>
             </ul>
         </div>

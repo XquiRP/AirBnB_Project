@@ -20,10 +20,12 @@ export class HeaderComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) {}
 
   navigateToCards() {
+    //RAZ de la selection des villes
     this.router.navigate(['/cards'], { queryParams: { city: '' } });
   }
 
   ngOnInit(): void {
+    //afficage carousel depuis le back
     const url = 'http://localhost:3000/carousel'; 
     this.navItems$ = this.http.get<Array<NavItems>>(url); 
   }

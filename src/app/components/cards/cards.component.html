@@ -1,5 +1,7 @@
 <div class="body-container">
+    <!-- boucle d'affichage des cartes-->
     <ng-container *ngIf="cards">
+        <!-- ajout d'un clique sur chaque carte pour ouvrir une page (non fonctionnel)-->
         <div class="cards-content" *ngFor="let card of cards" (click)="navigateToPage(card.id)">
             <app-cards-content [accomodation]="card"></app-cards-content>
         </div>

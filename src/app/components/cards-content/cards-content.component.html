@@ -2,12 +2,23 @@
     <div class="card-body">
         <div class="thumbnail">
             <div class="heart-container" (click)="toggleFavorite()">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 30px; width: 30px; stroke-width: 2; overflow: visible; opacity: 1;">
-                    <path [attr.stroke-opacity]="accomodation.favourite ? '1' : '1'" [attr.fill-opacity]="accomodation.favourite ? '0.8' : '0.4'" [attr.fill]="accomodation.favourite ? 'red' : 'black'" [attr.stroke]="accomodation.favourite ? 'white' : 'white'" d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17"></path>
-                </svg>                                  
+              <!-- Un conteneur de cœur cliquable qui réagit au clic de l'utilisateur -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 30px; width: 30px; stroke-width: 2; overflow: visible; opacity: 1;">
+                <path
+                  [attr.stroke-opacity]="accomodation.favourite ? '1' : '1'" 
+                  [attr.fill-opacity]="accomodation.favourite ? '0.8' : '0.4'" 
+                  [attr.fill]="accomodation.favourite ? 'red' : 'black'" 
+                  [attr.stroke]="accomodation.favourite ? 'white' : 'white'"
+                  d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17">
+                  <!-- Un cœur SVG qui change d'apparence en fonction de la propriété 'favourite' du modèle 'accomodation' -->
+                </path>
+              </svg>
             </div>
-            <div class="image-crop" [style.background-image]="'url(' + imageWithPrefix + ')'" [style.backgroundSize]="backgroundSize"></div>
-        </div>
+            <div class="image-crop" [style.background-image]="'url(' + imageWithPrefix + ')'" [style.backgroundSize]="backgroundSize">
+              <!-- Une zone d'affichage d'image avec des styles dynamiques basés sur 'imageWithPrefix' et 'backgroundSize' -->
+            </div>
+          </div>
+          
         <div class="location-info-container">
             <div class="location-info">
                 <div>
